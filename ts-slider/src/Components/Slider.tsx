@@ -37,8 +37,20 @@ const Slider = ({ slides }: SliderProps) => {
           <h2>{slides[currentIndex].title}</h2>
           <p>{slides[currentIndex].description}</p>
         </div>
-        <button onClick={handlePrevBtn}>Prev</button>
-        <button onClick={handleNextBtn}>Next</button>
+        <button
+          onClick={handlePrevBtn}
+          className="slider_image_btn"
+          style={{ left: "0" }}
+        >
+          Prev
+        </button>
+        <button
+          onClick={handleNextBtn}
+          className="slider_image_btn"
+          style={{ right: "0" }}
+        >
+          Next
+        </button>
       </div>
     </>
   );
