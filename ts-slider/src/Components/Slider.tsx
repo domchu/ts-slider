@@ -18,7 +18,10 @@ const Slider = ({ slides }: SliderProps) => {
     const nextIndex = (currentIndex + 1) % slides.length;
     setCurrentIndex(nextIndex);
   };
-  const handlePrevBtn = () => {};
+    const handlePrevBtn = () => {
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      setCurrentIndex(prevIndex);
+    };
 
   return (
     <>
