@@ -1,8 +1,6 @@
-
-import './App.css'
+import "./App.css";
 
 function App() {
-  // SECOND SLIDER
   const slides = [
     {
       id: 1,
@@ -61,4 +59,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
