@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Slider.css";
 
 type SliderProps = {
   slides: {
@@ -18,10 +19,10 @@ const Slider = ({ slides }: SliderProps) => {
     const nextIndex = (currentIndex + 1) % slides.length;
     setCurrentIndex(nextIndex);
   };
-    const handlePrevBtn = () => {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-      setCurrentIndex(prevIndex);
-    };
+  const handlePrevBtn = () => {
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    setCurrentIndex(prevIndex);
+  };
 
   return (
     <>
@@ -36,7 +37,9 @@ const Slider = ({ slides }: SliderProps) => {
         <div className="slider-content">
           <h2>{slides[currentIndex].title}</h2>
           <p>{slides[currentIndex].description}</p>
-          <a href={slides[currentIndex].link}>{slides[currentIndex].button}</a>
+          <a className="links" href={slides[currentIndex].link}>
+            {slides[currentIndex].button}
+          </a>
         </div>
         <button
           onClick={handlePrevBtn}
@@ -52,6 +55,19 @@ const Slider = ({ slides }: SliderProps) => {
         >
           Next
         </button>
+        <div className="slider_controls">
+          <div className="dots">
+            {slides.map((_, index) => {
+              return (
+                <span
+                  key={slides[currentIndex].link}
+                  onClick={() => setCurrentIndex(index)}
+                  className={currentIndex === index ? "active" : ""}
+                ></span>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );
