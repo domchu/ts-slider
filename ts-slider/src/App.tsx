@@ -1,4 +1,5 @@
 import "./App.css";
+import Slider from "./Components/Slider";
 
 function App() {
   const slides = [
@@ -55,6 +56,7 @@ function App() {
   return (
     <>
       <div>ts-slider</div>
+      <Slider slides={slides} />
     </>
   );
 }
