@@ -62,3 +62,12 @@ const App: React.FC = () => {
 export default App;
 
 
+
+FEATURES
+
+Fully responsive: Adapts to different screen sizes automatically.
+Customizable: Easily change icons and slide content.
+Autoplay: Optionally enable automatic slide transitions.
+
+LICENSE
+This package is open-source and licensed under the MIT License.

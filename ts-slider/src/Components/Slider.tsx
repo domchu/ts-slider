@@ -30,39 +30,48 @@ const Slider = ({ slides }: SliderProps) => {
     <>
       <div className="slider_container">
         <div className="slider_image">
-          <img
-            src={slides[currentIndex].image}
-            alt="Slider Image"
-            className="slider_image"
-          />
-        </div>
-        <div className="slider-content">
-          <h2>{slides[currentIndex].title}</h2>
-          <p>{slides[currentIndex].description}</p>
-          <a className="links" href={slides[currentIndex].link}>
-            {slides[currentIndex].button}
-          </a>
+          <div style={{ width: "100%", height: "100%", display: "flex", overflow: "hidden" }}>
+            {slides.map((eachImage) => (
+              
+            <img
+              src={eachImage.image}
+              alt="Slider Image"
+              className="slider_image"
+              style={{ translate: `${-100 * currentIndex }%`}}
+            />
+            ))}
+          </div>
+          <div className="slider-content">
+            <h2>{slides[currentIndex].title}</h2>
+            <p>{slides[currentIndex].description}</p>
+            <a className="links" href={slides[currentIndex].link}>
+              {slides[currentIndex].button}
+            </a>
+          </div>
         </div>
         <button
           onClick={handlePrevBtn}
           className="slider_image_btn"
           style={{ left: "0" }}
         >
-          <FaArrowLeft />
+          <FaArrowLeft
+            style={{ color: "white", fontSize: "1.8rem", padding: "5px" }}
+          />
         </button>
         <button
           onClick={handleNextBtn}
           className="slider_image_btn"
           style={{ right: "0" }}
         >
-          <FaArrowRight />
+          <FaArrowRight
+            style={{ color: "white", fontSize: "1.8rem", padding: "5px" }}
+          />
         </button>
         <div className="slider_controls">
           <div className="dots">
             {slides.map((_, index) => {
               return (
-                <span
-                  key={slides[currentIndex].link}
+                <span key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={currentIndex === index ? "active" : ""}
                 ></span>
