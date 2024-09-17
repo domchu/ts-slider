@@ -4,6 +4,11 @@
 font-family: Verdana, Tahoma, sans-serif;
 }
 
+/* css varible */
+:root{
+  --white_clr: #fff;
+   --main-btn-color:rgba(0,0,0,0.3);
+}
 .slider_container{
   width: 100%;
   aspect-ratio: 10/4.5;
@@ -19,4 +24,6 @@ font-family: Verdana, Tahoma, sans-serif;
   bottom: 0;
   display: block;
   position: absolute;
+  background-color: var(--main-btn-color);
+  color: var(--white-clr);
 }

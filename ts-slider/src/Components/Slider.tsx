@@ -36,6 +36,7 @@ const Slider = ({ slides }: SliderProps) => {
         <div className="slider-content">
           <h2>{slides[currentIndex].title}</h2>
           <p>{slides[currentIndex].description}</p>
+          <a href={slides[currentIndex].link}>{slides[currentIndex].button}</a>
         </div>
         <button
           onClick={handlePrevBtn}
