@@ -16,6 +16,7 @@
   position: absolute;
   background-color: var(--main-btn-color);
   color: var(--white-clr);
+  padding: 1rem;
 }
 .slider-content{
   position: absolute;

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Slider.css";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import {} from "react-icons/fa";
 
 type SliderProps = {
   slides: {
@@ -46,14 +48,14 @@ const Slider = ({ slides }: SliderProps) => {
           className="slider_image_btn"
           style={{ left: "0" }}
         >
-          Prev
+          <FaArrowLeft />
         </button>
         <button
           onClick={handleNextBtn}
           className="slider_image_btn"
           style={{ right: "0" }}
         >
-          Next
+          <FaArrowRight />
         </button>
         <div className="slider_controls">
           <div className="dots">

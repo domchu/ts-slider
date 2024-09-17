@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+ Responsive Slider Component(React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ A fully customizable and responsive slider component built with TypeScript, React, and React Icons. This component is designed for easy integration into your React projects, providing a smooth and efficient slider with full responsiveness across devices.
 
-Currently, two official plugins are available:
+ INSTALLATION
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+install the package via npm:
+ npm install ts-slider
 
-## Expanding the ESLint configuration
+ or using yarn:
+ yarn add ts-slider
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ USAGE
+Once installed, you can import and use the slider in your project as follows:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
+EXAMPLE:
+
+import React from 'react';
+import Slider from './Slider';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
+const App: React.FC = () => {
+  const slides = [
+    {
+      id: 1,
+      image: "img1.jpg",
+      title: "Slide 1",
+      description: "This is slide 1 description",
+      link: "url",
+      button: "Learn More",
     },
-  },
-})
-```
+    {
+      id: 2,
+      image: "img2.jpg",
+      title: "Slide 2",
+      description: "This is slide 2 description",
+      link: "url",
+      button: "About Us",
+    },
+    {
+      id: 3,
+      image: "img3.jpg",
+      title: "Slide 3",
+      description: "This is slide 3 description",
+      link: "url",
+      button: "Contact Us",
+    },
+    ...
+  ];
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+  return (
+    <div>
+      <h1>Responsive Slider Demo</h1>
+      <Slider
+        slides={slides}
+      />
+    </div>
+  );
+};
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+export default App;
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
