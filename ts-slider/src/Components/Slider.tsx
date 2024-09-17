@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Slider.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import {} from "react-icons/fa";
@@ -17,10 +17,26 @@ type SliderProps = {
 const Slider = ({ slides }: SliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // AUTO SLIDE
+  useEffect(() => {
+    const currentImage = setInterval(() => {
+       setCurrentIndex((index) => {
+         if (index === slides.length - 1) {
+           return 0;
+         }
+         return index + 1;
+       });
+    }, 4000);
+    return () => clearInterval(currentImage);
+  }, [currentIndex])
+
+
+  // Next Btn
   const handleNextBtn = () => {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    setCurrentIndex(nextIndex);
+    const nextIndex = (currentIndex + 1) % slides.length
+    setCurrentIndex(nextIndex)
   };
+  // prev Btn
   const handlePrevBtn = () => {
     const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
     setCurrentIndex(prevIndex);
