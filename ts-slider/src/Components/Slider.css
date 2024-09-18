@@ -47,7 +47,7 @@ animation: bridgekode 300ms ease-in-out
   text-align: center;
 }
 .slider-content > *{
-  color: white;
+  color: var(--white-clr);
 }
 .slider_image_dots{
       position: absolute;
@@ -61,7 +61,7 @@ animation: bridgekode 300ms ease-in-out
     text-decoration: none;
     padding: 10px 1rem;
     background-color: #de1818;
-    color: #fff;
+    color: var(--white-clr);
     border-radius: 5px;
     margin: 10px 0;
     font-weight: bold;
@@ -97,7 +97,7 @@ animation: bridgekode 300ms ease-in-out
     background-color: #de1818;
 }
 
-/* media */
+/* MEDIA */
 
 @media screen and (max-width:820px) {
     .links{

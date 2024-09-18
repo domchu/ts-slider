@@ -55,7 +55,6 @@ function App() {
 
   return (
     <>
-      <div>ts-slider</div>
       <Slider slides={slides} />
     </>
   );

@@ -18,9 +18,9 @@ EXAMPLE:
 
 import React from 'react';
 import Slider from './Slider';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-const App: React.FC = () => {
+
+const App = () => {
   const slides = [
     {
       id: 1,
@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>Responsive Slider Demo</h1>
+      <h1>Responsive Typescript Slider Demo</h1>
       <Slider
         slides={slides}
       />
@@ -61,13 +61,22 @@ const App: React.FC = () => {
 
 export default App;
 
+NOTE:
+The slides id must be a number,
+All slides image,title, description, link and button text must be a string,
 
+ICONS
+for Next button icon use <FaArrowRight/>
+for previous button icon use <FaArrowLeft/> from react-icon library
+
+installation.
+npm install react-icons
 
 FEATURES
 
 Fully responsive: Adapts to different screen sizes automatically.
 Customizable: Easily change icons and slide content.
-Autoplay: Optionally enable automatic slide transitions.
+Autoplay: enable automatic slide transitions.
 
 LICENSE
 This package is open-source and licensed under the MIT License.

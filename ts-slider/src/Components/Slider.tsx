@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Slider.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import {} from "react-icons/fa";
+
 
 type SliderProps = {
   slides: {
     id: number;
     image: string;
-    title: string;
-    description: string;
-    link: string;
-    button: string;
+    title?: string;
+    description?: string;
+    link?: string;
+    button?: string;
   }[];
 };
 
@@ -53,7 +53,8 @@ const Slider = ({ slides }: SliderProps) => {
               src={eachImage.image}
               alt="Slider Image"
               className="slider_image"
-              style={{ translate: `${-100 * currentIndex }%`}}
+                style={{ translate: `${-100 * currentIndex}%` }}
+                key={eachImage.id}
             />
             ))}
           </div>
