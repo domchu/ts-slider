@@ -1,7 +1,24 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" },
+//   ]
+// }
+
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ES5",                 // Target ES5 for wider browser support
+    "module": "ESNext",              // Use ESNext for module resolution
+    "declaration": true,             // Generate declaration (.d.ts) files
+    "outDir": "dist",                // Output directory for compiled files
+    "jsx": "react-jsx",              // Use the new JSX transform
+    "esModuleInterop": true,         // Interoperability with commonjs modules
+    "moduleResolution": "node",      // Use Node-style module resolution
+    "skipLibCheck": true,            // Skip checking type declarations from node_modules
+    "forceConsistentCasingInFileNames": true, // Enforce consistent case sensitivity
+    "isolatedModules": true          // Required for React projects
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

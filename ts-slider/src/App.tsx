@@ -1,5 +1,5 @@
 import "./App.css";
-import Slider from "./Components/Slider";
+import Slider from "./Slider";
 
 function App() {
   const slides = [

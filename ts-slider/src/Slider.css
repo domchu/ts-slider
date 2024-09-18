@@ -61,7 +61,7 @@ animation: bridgekode 300ms ease-in-out
     text-decoration: none;
     padding: 10px 1rem;
     background-color: #de1818;
-    color: var(--white-clr);
+    color: white;
     border-radius: 5px;
     margin: 10px 0;
     font-weight: bold;

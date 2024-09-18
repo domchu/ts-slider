@@ -46,7 +46,7 @@ const Slider = ({ slides }: SliderProps) => {
     <>
       <div className="slider_container">
         <div className="slider_image">
-          <div style={{ width: "100%", height: "100%", display: "flex", overflow: "hidden" }}>
+          <div style={{width: "100%", height: "100%", display: "flex", overflow: "hidden" }}>
             {slides.map((eachImage) => (
               
             <img
