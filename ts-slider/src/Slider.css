@@ -110,5 +110,46 @@ animation: bridgekode 300ms ease-in-out
     }
 }
 
+@media screen and (max-width:500px){
+  .dots span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    translate: scale 200ms ease-in-out;
+  
+}
+.slider-content{
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+ h2{
+   font-size: 1rem;
+  }
+  .links{
+      font-size: 1rem;
+      padding: 3px .3rem;
+       margin: 5px 0;
+       font-weight: 500;
+   }
+   .slider_image_btn{
+      padding: 0;
+  }
+}
+@media screen and (max-width:360px){
+  .slider-content{
+        position: absolute;
+        bottom: -11%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+  }
+}
+
 /* please 
 npm run rimraf */

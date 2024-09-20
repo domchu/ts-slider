@@ -1,23 +1,51 @@
- # Responsive Slider Component(React + TypeScript + Vite)
+ ## Responsive Slider Component(React + TypeScript + Vite)
 
 ---
  **A fully customizable and responsive slider component built with TypeScript, React, and React Icons. This component is designed for easy integration into your React projects, providing a smooth and efficient slider with full responsiveness across devices.**
 
 ---
- ## INSTALLATION
+ ### INSTALLATION
 
 **install the package via npm:**
+---
  **npm install ts-slider**
 
 **or using yarn:**
  **yarn add ts-slider**
 
 ---
- ## USAGE
+ ### USAGE
 **Once installed, you can import and use the slider in your project as follows:**
 
+### NOTE:
+**The slides id must be a number**
+**All slides image,title, description, link and button text must be a string**
+
 ---
-## EXAMPLE:
+### ICONS
+**for Next button icon use <FaArrowRight/>**
+**for previous button icon use <FaArrowLeft/> from react-icon library**
+
+**installation.**
+**npm install react-icons**
+
+
+---
+### FEATURES
+
+1. Fully responsive: Adapts to different screen sizes automatically.
+2. Customizable: Easily change icons and slide content.
+3. Autoplay: enable automatic slide transitions.
+
+---
+### LICENSE
+**This package is open-source and licensed under the MIT License.**
+
+### Github respository for source code
+[github link](https://github.com/domchu/ts-slider)
+
+---
+### EXAMPLE:
 ---
 ```JSX
 import React from 'react';
@@ -65,30 +93,4 @@ const App = () => {
 
 export default App;
 
----
-## NOTE:
-**The slides id must be a number**
-**All slides image,title, description, link and button text must be a string**
 
----
-## ICONS
-**for Next button icon use <FaArrowRight/>**
-**for previous button icon use <FaArrowLeft/> from react-icon library**
-
-**installation.**
-**npm install react-icons**
-
-
----
-## FEATURES
-
-1. Fully responsive: Adapts to different screen sizes automatically.
-2. Customizable: Easily change icons and slide content.
-3. Autoplay: enable automatic slide transitions.
-
----
-## LICENSE
-**This package is open-source and licensed under the MIT License.**
-
-### Github respository for source code
-**[github link](https://github.com/domchu/ts-slider)**
