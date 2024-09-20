@@ -1,7 +1,7 @@
 {
   "name": "ts-slider",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Your responsive slider component",
   "main": "dist/index.js",
@@ -14,7 +14,9 @@
     "build": "tsc",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "clean":"rimraf",
+    "prebuild":"npm run clean"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -46,7 +46,7 @@ const App = () => {
       link: "url",
       button: "Contact Us",
     },
-    ...
+     // Add more slides here
   ];
 
   return (
@@ -80,3 +80,6 @@ Autoplay: enable automatic slide transitions.
 
 LICENSE
 This package is open-source and licensed under the MIT License.
+
+please 
+npm run rimraf
