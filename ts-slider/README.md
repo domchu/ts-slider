@@ -1,7 +1,7 @@
  ## Responsive Slider Component(React + TypeScript + Vite)
 
 ---
- **A fully customizable and responsive slider component built with TypeScript, React, and React Icons. This component is designed for easy integration into your React projects, providing a smooth and efficient slider with full responsiveness across devices.**
+ **A fully customizable and responsive slider component built with TypeScript, React, and React Icons. This component is designed for easy integration into your React projects, providing a smooth and efficient slider with full responsiveness across devices and is also compatable for screen readers and keyboard users (Accessibility)**
 
 ---
  ### INSTALLATION
@@ -36,6 +36,7 @@
 1. Fully responsive: Adapts to different screen sizes automatically.
 2. Customizable: Easily change icons and slide content.
 3. Autoplay: enable automatic slide transitions of four(4) seconds/4000ms.
+4. Enable full page accessibility for screen readers & keyboard users.
 
 ---
 ### LICENSE
