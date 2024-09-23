@@ -11,6 +11,7 @@ type SliderProps = {
     description?: string;
     link?: string;
     button?: string;
+    alt:string
   }[];
 };
 
@@ -44,24 +45,37 @@ const Slider = ({ slides }: SliderProps) => {
 
   return (
     <>
-      <div className="slider_container">
+      <section aria-label="Slider Image Carousel" className="slider_container">
         <div className="slider_image">
-          <div style={{width: "100%", height: "100%", display: "flex", overflow: "hidden" }}>
-            {slides.map((eachImage) => (
-              
-            <img
-              src={eachImage.image}
-              alt="Slider Image"
-              className="slider_image"
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              overflow: "hidden",
+            }}
+          >
+            {slides.map((eachImage, index) => (
+              <img
+                src={eachImage.image}
+                alt={eachImage.alt}
+                className="slider_image"
+                aria-hidden={currentIndex !== index}
                 style={{ translate: `${-100 * currentIndex}%` }}
                 key={eachImage.id}
-            />
+              />
             ))}
           </div>
           <div className="slider-content">
-            <h2>{slides[currentIndex].title}</h2>
-            <p>{slides[currentIndex].description}</p>
-            <a className="links" href={slides[currentIndex].link}>
+            <h2 aria-label="Slider Title">{slides[currentIndex].title}</h2>
+            <p aria-label="Slider Description">
+              {slides[currentIndex].description}
+            </p>
+            <a
+              className="links"
+              aria-label="Button Link"
+              href={slides[currentIndex].link}
+            >
               {slides[currentIndex].button}
             </a>
           </div>
@@ -70,8 +84,10 @@ const Slider = ({ slides }: SliderProps) => {
           onClick={handlePrevBtn}
           className="slider_image_btn"
           style={{ left: "0" }}
+          aria-label="View Previous Image"
         >
           <FaArrowLeft
+            aria-hidden
             style={{ color: "white", fontSize: "1.8rem", padding: "5px" }}
           />
         </button>
@@ -79,8 +95,10 @@ const Slider = ({ slides }: SliderProps) => {
           onClick={handleNextBtn}
           className="slider_image_btn"
           style={{ right: "0" }}
+          aria-label="View Next Image"
         >
           <FaArrowRight
+            aria-hidden
             style={{ color: "white", fontSize: "1.8rem", padding: "5px" }}
           />
         </button>
@@ -88,15 +106,17 @@ const Slider = ({ slides }: SliderProps) => {
           <div className="dots">
             {slides.map((_, index) => {
               return (
-                <span key={index}
+                <span
+                  key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={currentIndex === index ? "active" : ""}
+                  aria-label={`View Image ${index + 1}`}
                 ></span>
               );
             })}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

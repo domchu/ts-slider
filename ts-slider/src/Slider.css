@@ -1,8 +1,16 @@
+
+:root{
+  --white_clr: #fff;
+   --main-btn-color:rgba(0,0,0,0.3);
+}
+
+
+
 .slider_container{
   width: 100%;
   aspect-ratio: 10/4.5;
   position: relative;
-  height: 100%;
+  margin: 0 auto;
 }
 
 .slider_image{
@@ -21,20 +29,21 @@ transition: translate 300ms ease-in-out;
   bottom: 0;
   display: block;
   position: absolute;
-  background-color: var(--main-btn-color);
+  background-color: rgba(0, 0, 0, 0.2);;
   color: var(--white-clr);
   padding: 10px;
   border: none;
   cursor: pointer;
   transition: background-color 100ms ease-in-out;
 }
-.slider_image_btn:hover{
+.slider_image_btn:hover, .slider_image_btn:focus-visible{
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.slider_image_btn:hover > * {
+.slider_image_btn:hover > *, .slider_image_btn:focus-visible > * {
 animation: bridgekode 300ms ease-in-out 
 }
+
 @keyframes bridgekode {
   50%{
     scale: 1.4 0.9;
@@ -45,10 +54,11 @@ animation: bridgekode 300ms ease-in-out
   bottom: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: var(--white-clr) !important;
   text-align: center;
 }
 .slider-content > *{
-  color: var(--white-clr);
+  color: #fff
 }
 .slider_image_dots{
       position: absolute;
@@ -62,7 +72,7 @@ animation: bridgekode 300ms ease-in-out
     text-decoration: none;
     padding: 10px 1rem;
     background-color: #de1818;
-    color: white;
+    color: var(--white_clr);
     border-radius: 5px;
     margin: 10px 0;
     font-weight: bold;
@@ -71,7 +81,7 @@ animation: bridgekode 300ms ease-in-out
 }
 .slider_controls{
     position:absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -83,19 +93,22 @@ animation: bridgekode 300ms ease-in-out
 
 }
 .dots span{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #ccc;
     cursor: pointer;
     translate: scale 200ms ease-in-out;
   
 }
-.dots span:hover{
+.dots span:hover, .dots span :focus-visible{
   scale: 1.2;
 }
 .dots span.active{
     background-color: #de1818;
+}
+.slider_image_btn:focus-visible, .dots span:focus-visible{
+  outline: auto;
 }
 
 /* MEDIA */
@@ -107,6 +120,7 @@ animation: bridgekode 300ms ease-in-out
     }
     h2{
         font-size: 1.3rem;
+        color: var(--white_clr);
     }
 }
 
@@ -151,5 +165,8 @@ animation: bridgekode 300ms ease-in-out
   }
 }
 
-/* please 
-npm run rimraf */
+@media not (prefers-reduce-notion) {
+/* .slider_image_btn:hover > *, .slider_image_btn:focus-visible > * {
+animation: bridgekode 300ms ease-in-out 
+} */
+}

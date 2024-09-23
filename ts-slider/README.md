@@ -20,6 +20,7 @@
 ### NOTE:
 **The slides id must be a number**
 **All slides image,title, description, link and button text must be a string**
+**The title, description, link and button are all optional in the slides array of object, only image is a must**
 
 ---
 ### ICONS
@@ -32,10 +33,9 @@
 
 ---
 ### FEATURES
-
 1. Fully responsive: Adapts to different screen sizes automatically.
 2. Customizable: Easily change icons and slide content.
-3. Autoplay: enable automatic slide transitions.
+3. Autoplay: enable automatic slide transitions of four(4) seconds/4000ms.
 
 ---
 ### LICENSE
